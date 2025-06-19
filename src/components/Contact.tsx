@@ -6,6 +6,8 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Clock,
+  CheckCircle,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -80,6 +82,27 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold">Ubicación</p>
                   <p className="text-gray-300">Buenos Aires, Argentina</p>
+                </div>
+              </div>
+
+              {/* NUEVAS SECCIONES AGREGADAS */}
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                  <CheckCircle size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Estado</p>
+                  <p className="text-gray-300">Disponible para proyectos</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <Clock size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Horarios</p>
+                  <p className="text-gray-300">Lun - Vie: 9:00 - 18:00 ART</p>
                 </div>
               </div>
             </div>
