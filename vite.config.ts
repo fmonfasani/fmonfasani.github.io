@@ -4,7 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // Para repositorio username.github.io
+  base: "/",
+
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,7 +13,12 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: false,
+    assetsDir: "assets",
+  },
+  server: {
+    host: "::",
+    port: 8080,
   },
 });
