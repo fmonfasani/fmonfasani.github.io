@@ -7,6 +7,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  X, 
   Calendar,
   MessageCircle,
 } from "lucide-react";
@@ -151,13 +152,13 @@ const Contact = () => {
                   <Linkedin size={24} />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/fmonfasani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors"
-                  title="Twitter"
+                  className="w-12 h-12 bg-gray-700 hover:bg-black rounded-lg flex items-center justify-center transition-colors"
+                  title="X"
                 >
-                  <Twitter size={24} />
+                  <X size={24} />
                 </a>
                 <a
                   href="https://wa.me/543585614524?text=Hola%20Federico!%20Me%20interesa%20contactarte%20para%20un%20proyecto"
