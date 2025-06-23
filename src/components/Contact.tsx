@@ -8,7 +8,6 @@ import {
   Linkedin,
   Twitter,
   Calendar,
-  CheckCircle,
   MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
@@ -90,17 +89,26 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* REEMPLAZADO: WhatsApp en lugar de Status */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                  <CheckCircle size={24} />
+                  <MessageCircle size={24} />
                 </div>
-                <div>
-                  <p className="font-semibold">{t('contact.status')}</p>
-                  <p className="text-gray-300">{t('contact.available')}</p>
+                <div className="flex-1">
+                  <p className="font-semibold">{t('contact.whatsapp')}</p>
+                  <a
+                    href="https://wa.me/543585614524?text=Hola%20Federico!%20Me%20interesa%20contactarte%20para%20un%20proyecto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-sm font-medium"
+                  >
+                    <MessageCircle size={16} />
+                    <span>{t('contact.whatsapp.button')}</span>
+                  </a>
                 </div>
               </div>
 
-              {/* NUEVO: Botón Agendar Cita */}
+              {/* Botón Agendar Cita */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
                   <Calendar size={24} />
@@ -120,7 +128,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Redes sociales CON WHATSAPP */}
+            {/* Redes sociales */}
             <div className="mt-12">
               <h4 className="text-xl font-bold mb-6">{t('contact.social')}</h4>
               <div className="flex space-x-4 flex-wrap">
@@ -151,7 +159,6 @@ const Contact = () => {
                 >
                   <Twitter size={24} />
                 </a>
-                {/* NUEVO: WhatsApp */}
                 <a
                   href="https://wa.me/543585614524?text=Hola%20Federico!%20Me%20interesa%20contactarte%20para%20un%20proyecto"
                   target="_blank"

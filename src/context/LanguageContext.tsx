@@ -149,7 +149,7 @@ const translations = {
     'contact.placeholder.message': 'Cuéntame sobre tu proyecto...',
     
     // Footer
-    'footer.rights': '© 2025 Federico Monfasani. Todos los derechos reservados.',
+    'footer.rights': '© 2024 Federico Monfasani. Todos los derechos reservados.',
     'footer.made': 'Desarrollado con',
     'footer.and': 'y mucho',
   }
