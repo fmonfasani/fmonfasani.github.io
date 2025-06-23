@@ -33,7 +33,7 @@ const Skills = () => {
     {
       title: t('skills.architecture'),
       icon: <Building2 size={32} />,
-      skills: ["Microservices", "Event Driven", "Clean Architecture", "CQRS", "Domain Driven", "Serverless", "Event Sourcing"],
+      skills: ["Microservices", "Event Driven", "Clean Architecture", "Domain Driven", "Serverless", "CQRS",],
       color: "from-blue-500 to-indigo-500"
     },
     {
