@@ -69,8 +69,8 @@ const translations = {
     'contact.send': 'Send Message',
     'contact.phone': 'Phone',
     'contact.location': 'Location',
-    'contact.status': 'Status',
-    'contact.available': 'Available for projects',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.whatsapp.button': 'Chat on WhatsApp',
     'contact.schedule': 'Schedule a Meeting',
     'contact.book': 'Book a Meeting',
     'contact.social': 'Follow me on social media',
@@ -139,8 +139,8 @@ const translations = {
     'contact.send': 'Enviar Mensaje',
     'contact.phone': 'Teléfono',
     'contact.location': 'Ubicación',
-    'contact.status': 'Estado',
-    'contact.available': 'Disponible para proyectos',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.whatsapp.button': 'Chatear por WhatsApp',
     'contact.schedule': 'Agendar una Reunión',
     'contact.book': 'Agendar Reunión',
     'contact.social': 'Sígueme en redes',
@@ -149,7 +149,7 @@ const translations = {
     'contact.placeholder.message': 'Cuéntame sobre tu proyecto...',
     
     // Footer
-    'footer.rights': '© 2024 Federico Monfasani. Todos los derechos reservados.',
+    'footer.rights': '© 2025 Federico Monfasani. Todos los derechos reservados.',
     'footer.made': 'Desarrollado con',
     'footer.and': 'y mucho',
   }
