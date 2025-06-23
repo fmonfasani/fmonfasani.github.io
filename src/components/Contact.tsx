@@ -7,9 +7,12 @@ import {
   Github,
   Linkedin,
   Twitter,
-  X, 
   Calendar,
   MessageCircle,
+  Youtube,
+  MessageSquare,
+  Package,
+  Video,
 } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from '../context/LanguageContext';
@@ -62,26 +65,6 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <p className="font-semibold">{t('contact.email')}</p>
-                  <p className="text-gray-300">fmonfasani@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <p className="font-semibold">{t('contact.phone')}</p>
-                  <p className="text-gray-300">+54 9 358-561-4524</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -129,21 +112,12 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Redes sociales */}
+            {/* Redes sociales - Social Media */}
             <div className="mt-12">
-              <h4 className="text-xl font-bold mb-6">{t('contact.social')}</h4>
+              <h4 className="text-xl font-bold mb-6">{t('contact.social.media')}</h4>
               <div className="flex space-x-4 flex-wrap">
                 <a
-                  href="https://github.com/fmonfasani"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors"
-                  title="GitHub"
-                >
-                  <Github size={24} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/federico-monfasani"
+                  href="https://www.linkedin.com/in/fmonfasani/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
@@ -156,9 +130,9 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-700 hover:bg-black rounded-lg flex items-center justify-center transition-colors"
-                  title="X"
+                  title="X (Twitter)"
                 >
-                  <X size={24} />
+                  <Twitter size={24} />
                 </a>
                 <a
                   href="https://wa.me/543585614524?text=Hola%20Federico!%20Me%20interesa%20contactarte%20para%20un%20proyecto"
@@ -168,6 +142,58 @@ const Contact = () => {
                   title="WhatsApp"
                 >
                   <MessageCircle size={24} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@fmonfasani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="YouTube"
+                >
+                  <Youtube size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Comunidades - Communities */}
+            <div className="mt-8">
+              <h4 className="text-xl font-bold mb-6">{t('contact.social.community')}</h4>
+              <div className="flex space-x-4 flex-wrap">
+                <a
+                  href="https://github.com/fmonfasani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="GitHub"
+                >
+                  <Github size={24} />
+                </a>
+                <a
+                  href="https://discord.com/channels/@fmonfasani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="Discord"
+                >
+                  <MessageSquare size={24} />
+                </a>
+                <a
+                  href="https://pypi.org/manage/projects/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-yellow-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="PyPI"
+                >
+                  <Package size={24} />
+                </a>
+                <a
+                  href="https://www.twitch.tv/fmonfasani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="Twitch"
+                >
+                  <Video size={24} />
                 </a>
               </div>
             </div>
