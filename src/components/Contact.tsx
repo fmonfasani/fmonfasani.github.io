@@ -7,8 +7,9 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Clock,
+  Calendar,
   CheckCircle,
+  MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from '../context/LanguageContext';
@@ -99,26 +100,36 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* NUEVO: Botón Agendar Cita */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                  <Clock size={24} />
+                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
+                  <Calendar size={24} />
                 </div>
-                <div>
-                  <p className="font-semibold">{t('contact.hours')}</p>
-                  <p className="text-gray-300">{t('contact.schedule')}</p>
+                <div className="flex-1">
+                  <p className="font-semibold">{t('contact.schedule')}</p>
+                  <a
+                    href="https://calendly.com/fmonfasani" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 mt-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors text-sm font-medium"
+                  >
+                    <Calendar size={16} />
+                    <span>{t('contact.book')}</span>
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Redes sociales */}
+            {/* Redes sociales CON WHATSAPP */}
             <div className="mt-12">
               <h4 className="text-xl font-bold mb-6">{t('contact.social')}</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 flex-wrap">
                 <a
                   href="https://github.com/fmonfasani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
+                  className="w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="GitHub"
                 >
                   <Github size={24} />
                 </a>
@@ -127,6 +138,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="LinkedIn"
                 >
                   <Linkedin size={24} />
                 </a>
@@ -134,9 +146,20 @@ const Contact = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
+                  className="w-12 h-12 bg-gray-700 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors"
+                  title="Twitter"
                 >
                   <Twitter size={24} />
+                </a>
+                {/* NUEVO: WhatsApp */}
+                <a
+                  href="https://wa.me/543585614524?text=Hola%20Federico!%20Me%20interesa%20contactarte%20para%20un%20proyecto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors"
+                  title="WhatsApp"
+                >
+                  <MessageCircle size={24} />
                 </a>
               </div>
             </div>
