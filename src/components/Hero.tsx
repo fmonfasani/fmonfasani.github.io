@@ -1,7 +1,10 @@
-
+// src/components/Hero.tsx
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -29,7 +32,7 @@ const Hero = () => {
               MONFASANI
             </p>
             <p className="text-[0.9rem] md:text-[1.2rem] text-[#C0C0C0] mt-2 md:mt-3 tracking-[1px] md:tracking-[2px] uppercase">
-              SOFTWARE DEVELOPER
+              {t('hero.title')}
             </p>
           </div>
         </div>

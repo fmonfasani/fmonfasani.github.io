@@ -1,9 +1,12 @@
-
+// src/components/Header.tsx
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -33,29 +36,30 @@ const Header = () => {
               onClick={() => scrollToSection('home')}
               className="text-gray-300 hover:text-teal-400 transition-colors font-medium"
             >
-              Inicio
+              {t('nav.home')}
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
               className="text-gray-300 hover:text-teal-400 transition-colors font-medium"
             >
-              Habilidades
+              {t('nav.skills')}
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
               className="text-gray-300 hover:text-teal-400 transition-colors font-medium"
             >
-              Proyectos
+              {t('nav.projects')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-300 hover:text-teal-400 transition-colors font-medium"
             >
-              Contacto
+              {t('nav.contact')}
             </button>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
                className="text-gray-300 hover:text-teal-400 transition-colors">
               <Github size={20} />
@@ -78,46 +82,36 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden bg-slate-800/95 border-t border-slate-700 py-4">
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="text-gray-300 hover:text-teal-400 transition-colors text-left"
+                className="text-gray-300 hover:text-teal-400 transition-colors font-medium text-left"
               >
-                Inicio
+                {t('nav.home')}
               </button>
               <button 
                 onClick={() => scrollToSection('skills')}
-                className="text-gray-300 hover:text-teal-400 transition-colors text-left"
+                className="text-gray-300 hover:text-teal-400 transition-colors font-medium text-left"
               >
-                Habilidades
+                {t('nav.skills')}
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="text-gray-300 hover:text-teal-400 transition-colors text-left"
+                className="text-gray-300 hover:text-teal-400 transition-colors font-medium text-left"
               >
-                Proyectos
+                {t('nav.projects')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-teal-400 transition-colors text-left"
+                className="text-gray-300 hover:text-teal-400 transition-colors font-medium text-left"
               >
-                Contacto
+                {t('nav.contact')}
               </button>
-              <div className="flex space-x-4 pt-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-300 hover:text-teal-400 transition-colors">
-                  <Github size={20} />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                   className="text-gray-300 hover:text-teal-400 transition-colors">
-                  <Linkedin size={20} />
-                </a>
-                <a href="mailto:federico@example.com"
-                   className="text-gray-300 hover:text-teal-400 transition-colors">
-                  <Mail size={20} />
-                </a>
+              <div className="pt-4 border-t border-slate-700">
+                <LanguageSelector />
               </div>
             </nav>
           </div>
