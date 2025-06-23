@@ -1,5 +1,5 @@
 // src/components/Skills.tsx
-import { Globe, Server, Database, Smartphone, Terminal, Palette } from 'lucide-react';
+import { Globe, Bot, Database, Smartphone, Building2, Terminal } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Skills = () => {
@@ -7,40 +7,40 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: Globe,
-      title: t('skills.frontend'),
-      color: 'bg-blue-600',
-      skills: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'HTML5', 'CSS3']
+      title: t('skills.fullstack'),
+      icon: <Globe size={32} />,
+      skills: ["React", "TypeScript", "Next.js", "Vue.js", "Node.js", "Python", "Django", "Express", "Tailwind CSS", "Figma", "UI/UX"],
+      color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Server,
-      title: t('skills.backend'),
-      color: 'bg-green-600',
-      skills: ['Node.js', 'Python', 'Java', 'Express', 'Django', 'Spring Boot', 'REST APIs']
+      title: t('skills.agents'),
+      icon: <Bot size={32} />,
+      skills: ["OpenAI", "Claude AI", "LangChain", "Pinecone", "Hugging Face", "TensorFlow", "PyTorch", "RAG", "Vector DB"],
+      color: "from-purple-500 to-violet-500"
     },
     {
-      icon: Database,
-      title: t('skills.database'),
-      color: 'bg-purple-600',
-      skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Firebase', 'Supabase']
+      title: t('skills.apidb'),
+      icon: <Database size={32} />,
+      skills: ["REST APIs", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Supabase", "Prisma"],
+      color: "from-red-500 to-rose-500"
     },
     {
-      icon: Smartphone,
       title: t('skills.mobile'),
-      color: 'bg-orange-600',
-      skills: ['React Native', 'Flutter', 'Ionic', 'Expo', 'Android Studio']
+      icon: <Smartphone size={32} />,
+      skills: ["React Native", "Flutter", "Ionic", "Expo", "Android Studio", "Swift", "Kotlin"],
+      color: "from-orange-500 to-amber-500"
     },
     {
-      icon: Terminal,
+      title: t('skills.architecture'),
+      icon: <Building2 size={32} />,
+      skills: ["Microservices", "Event Driven", "Clean Architecture", "CQRS", "Domain Driven", "Serverless", "Event Sourcing"],
+      color: "from-blue-500 to-indigo-500"
+    },
+    {
       title: t('skills.devops'),
-      color: 'bg-gray-600',
-      skills: ['Docker', 'AWS', 'Git', 'GitHub Actions', 'Vercel', 'Netlify']
-    },
-    {
-      icon: Palette,
-      title: t('skills.design'),
-      color: 'bg-pink-600',
-      skills: ['Figma', 'Adobe XD', 'UI/UX', 'Responsive Design', 'Wireframing']
+      icon: <Terminal size={32} />,
+      skills: ["Docker", "AWS", "Azure", "Git", "GitHub Actions", "Vercel", "Netlify", "CI/CD"],
+      color: "from-gray-500 to-gray-700"
     }
   ];
 
@@ -62,11 +62,11 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/20"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/20 group"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className={`w-16 h-16 ${category.color} rounded-lg flex items-center justify-center mb-4`}>
-                    <IconComponent size={32} className="text-white" />
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    {IconComponent}
                   </div>
                   <h3 className="text-xl font-bold mb-4">{category.title}</h3>
                   <div className="flex flex-wrap gap-2 justify-center">

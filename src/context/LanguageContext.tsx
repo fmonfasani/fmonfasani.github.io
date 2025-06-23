@@ -26,12 +26,12 @@ const translations = {
     // Skills
     'skills.title': 'Technical Skills',
     'skills.subtitle': 'Technologies and tools I master to create complete digital solutions',
-    'skills.frontend': 'Frontend',
-    'skills.backend': 'Backend',
-    'skills.database': 'Database',
+    'skills.fullstack': 'Full Stack',
+    'skills.agents': 'IA Agents',
+    'skills.apidb': 'API and Database',
     'skills.mobile': 'Mobile',
+    'skills.architecture': 'Architecture', 
     'skills.devops': 'DevOps',
-    'skills.design': 'Design',
     
     // Projects
     'projects.title': 'Featured Projects',
@@ -97,12 +97,12 @@ const translations = {
     // Skills
     'skills.title': 'Habilidades Técnicas',
     'skills.subtitle': 'Tecnologías y herramientas que domino para crear soluciones digitales completas',
-    'skills.frontend': 'Frontend',
-    'skills.backend': 'Backend',
-    'skills.database': 'Base de Datos',
+    'skills.fullstack': 'Full Stack',
+    'skills.agents': 'Agentes IA',
+    'skills.apidb': 'API y Base de Datos',
     'skills.mobile': 'Móvil',
+    'skills.architecture': 'Arquitectura',
     'skills.devops': 'DevOps',
-    'skills.design': 'Diseño',
     
     // Projects
     'projects.title': 'Proyectos Destacados',
